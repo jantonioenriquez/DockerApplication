@@ -9,7 +9,7 @@
       <env name="LOG_LEVEL" value="DEBUG" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="org.example.DockerServiceApplication" />
-    <module name="DockerApplication" />
+    <module name="DockerProject" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.example.*" />
