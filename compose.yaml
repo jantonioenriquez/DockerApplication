@@ -1,0 +1,23 @@
+version: "3.8"  # Specifies the Docker Compose file format version
+
+services:
+  app:
+    build: .  # Builds the Docker image using the Dockerfile in the current directory
+    ports:
+      - "8443:8443"  # Maps host port 8443 to container port 8443 (application access)
+    environment:
+      PORT: 8443  # Port on which the Spring Boot application will run inside the container
+      MONGO_DB: BD_CAT_PRODUCTS  # Name of the MongoDB database to connect to
+      MONGO_URL: mongodb://mongo:27017/BD_CAT_PRODUCTS  # Connection string to MongoDB service (uses service name "mongo" as host)
+      LOG_LEVEL: DEBUG  # Logging level for the application (used in application.yml)
+    depends_on:
+      - mongo  # Ensures MongoDB container starts before the app (does NOT guarantee readiness)
+
+  mongo:
+    image: mongo:7  # ოფიციcial MongoDB image, version 7
+    ports:
+      - "27017:27017"  # Exposes MongoDB port for local access (e.g., from host tools like Compass)
+    volumes:
+      - mongo_data:/data/db  # Persists MongoDB data in a named Docker volume
+volumes:
+  mongo_data:  # Named volume declaration (managed by Docker)
