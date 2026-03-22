@@ -1,12 +1,13 @@
 package org.example.controller;
 
 import lombok.extern.log4j.Log4j2;
+import org.example.common.application.rest.ApplicationController;
 import org.example.domain.create.CreateProductCommand;
 import org.example.domain.create.CreateProductResponse;
 import org.example.domain.query.QueryProductCommand;
 import org.example.domain.query.QueryProductResponse;
 import org.example.domain.service.ProductApplicationService;
-import org.example.domain.valueObject.DomainConstants;
+import org.example.common.application.valueObject.DomainConstants;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value = "/products", produces = "application/vnd.api.v1+json")
-public class ProductController {
+public class ProductController extends ApplicationController {
 
     private final ProductApplicationService productApplicationService;
 

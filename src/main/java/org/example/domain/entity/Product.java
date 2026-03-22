@@ -2,8 +2,8 @@ package org.example.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
-import org.example.domain.valueObject.AggregateRoot;
-import org.example.domain.valueObject.ProductId;
+import org.example.common.application.valueObject.AggregateRoot;
+import org.example.common.application.valueObject.ProductId;
 
 import java.util.Date;
 

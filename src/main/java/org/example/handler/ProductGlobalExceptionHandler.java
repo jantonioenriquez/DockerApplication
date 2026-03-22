@@ -1,6 +1,11 @@
-package org.example.domain.exception;
+package org.example.handler;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.common.application.handler.ErrorDTO;
+import org.example.common.application.handler.GlobalExceptionHandler;
+import org.example.domain.exception.ProductDomainException;
+import org.example.domain.exception.ProductNotFoundException;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -8,8 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Slf4j
+@Order(1)
 @ControllerAdvice
-public class ProductGlobalExceptionHandler extends GlobalExceptionHandler {
+public class ProductGlobalExceptionHandler {
 
     @ResponseBody
     @ExceptionHandler(value = {ProductDomainException.class})
