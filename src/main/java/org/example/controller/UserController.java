@@ -1,6 +1,7 @@
 package org.example.controller;
 
 import lombok.extern.log4j.Log4j2;
+import org.example.common.application.rest.ApplicationController;
 import org.example.domain.create.CreateUserCommand;
 import org.example.domain.create.CreateUserResponse;
 import org.example.domain.query.QueryUserResponse;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value = "/users", produces = "application/vnd.api.v1+json")
-public class UserController {
+public class UserController extends ApplicationController {
     private final UserApplicationService userApplicationService;
 
     public UserController(UserApplicationService userApplicationService) {
