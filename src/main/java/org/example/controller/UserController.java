@@ -7,7 +7,7 @@ import org.example.domain.create.CreateUserResponse;
 import org.example.domain.query.QueryUserResponse;
 import org.example.domain.query.QueryUsersCommand;
 import org.example.domain.service.UserApplicationService;
-import org.example.domain.valueObject.DomainConstants;
+import org.example.common.application.valueObject.DomainConstants;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -7,7 +7,7 @@ import org.example.domain.create.CreateProductResponse;
 import org.example.domain.query.QueryProductCommand;
 import org.example.domain.query.QueryProductResponse;
 import org.example.domain.service.ProductApplicationService;
-import org.example.domain.valueObject.DomainConstants;
+import org.example.common.application.valueObject.DomainConstants;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -2,7 +2,7 @@ package org.example.dataaccess.mapper;
 
 import org.example.dataaccess.entity.UserEntity;
 import org.example.domain.entity.User;
-import org.example.domain.valueObject.UserId;
+import org.example.common.application.valueObject.UserId;
 import org.springframework.stereotype.Component;
 
 @Component

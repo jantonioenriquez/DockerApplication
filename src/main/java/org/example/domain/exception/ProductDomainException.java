@@ -1,6 +1,7 @@
 package org.example.domain.exception;
 
 import lombok.Getter;
+import org.example.common.application.handler.DomainException;
 
 @Getter
 public class ProductDomainException extends DomainException {

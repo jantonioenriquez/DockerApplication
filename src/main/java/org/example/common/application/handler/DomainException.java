@@ -1,4 +1,4 @@
-package org.example.domain.exception;
+package org.example.common.application.handler;
 
 public class DomainException extends RuntimeException {
 

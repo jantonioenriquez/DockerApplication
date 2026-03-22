@@ -1,9 +1,10 @@
-package org.example.domain.exception;
+package org.example.common.application.handler;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.ValidationException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
@@ -11,8 +12,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Order(2)
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
     @ResponseBody
     @ExceptionHandler(value = {Exception.class})
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)

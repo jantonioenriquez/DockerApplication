@@ -1,4 +1,4 @@
-package org.example.domain.valueObject;
+package org.example.common.application.valueObject;
 
 public class ProductId extends BaseId<String> {
     public ProductId(String value) {
